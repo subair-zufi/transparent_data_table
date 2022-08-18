@@ -11,25 +11,41 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+<!-- TODO: Put a short description of the package here that helps potential users
+know whether this package might be useful for them. -->
 
-## Features
+<!-- ## Features -->
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+In some cases I really need to customize background of PaginatedDataTable. So, I unwrapped the Card widget from it.
 
-## Getting started
+TransparentDataTable will accept any color/ image like any other widget.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
 
 ```dart
-const like = 'sample';
+    Scaffold(
+      appBar: AppBar(
+        title: const Text('Tansperent Table'),
+      ),
+      /// You can wrap the widget to  [Container] 
+      /// with decoration or 
+      /// give a backgroundColor to [Scaffold]
+      backgroundColor: Colors.grey, 
+      body: TransparentDataTable(columns:const [
+        DataColumn(label: Text('C-1')),
+        DataColumn(label: Text('C-2')),
+        DataColumn(label: Text('C-3')),
+        DataColumn(label: Text('C-4')),
+        DataColumn(label: Text('C-5')),
+        DataColumn(label: Text('C-6')),
+        DataColumn(label: Text('C-7')),
+        DataColumn(label: Text('C-8')),
+        DataColumn(label: Text('C-9')),
+      ], source: source),
+    )
 ```
 
 ## Additional information
